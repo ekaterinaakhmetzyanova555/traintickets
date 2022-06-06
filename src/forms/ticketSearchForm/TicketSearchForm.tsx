@@ -1,11 +1,11 @@
-import { HeaderContainer, StyledDialogActions } from "./ticketFormStyles";
+import {Body, HeaderContainer, StyledDialogActions} from "./ticketFormStyles";
 import {selectLoading} from "./ticketFormSelectors";
 import {useSelector} from "react-redux";
-import { FormProvider } from "react-advanced-form"
+import {FormProvider, useForm} from "react-hook-form"
 
 
 export default function TicketSearchForm(props) {
-
+    const formMethods = useForm();
     const isLoading = useSelector(selectLoading);
 
     return (
