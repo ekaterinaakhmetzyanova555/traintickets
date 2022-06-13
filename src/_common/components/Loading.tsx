@@ -1,8 +1,6 @@
 import React from "react";
-
-import { CircularProgress } from "@material-ui/core";
-
 import styled, { css } from "styled-components";
+import {CircularProgress} from "@mui/material";
 
 const Container = styled.div`
   position: absolute;
@@ -14,9 +12,8 @@ const Container = styled.div`
   z-index: 100;
 
   ${(p) =>
-    p.campaignList &&
     css`
-      padding-top: ${p.theme.spacing(13)}px;
+      padding-top: ${p.theme.spacing(12)}px;
       background: transparent;
     `}
 `;
@@ -29,6 +26,7 @@ const CircularProgressStyled = styled(CircularProgress)`
   }
 `;
 
+// @ts-ignore
 const Loading = (props) => (
   <Container data-testid="loading" {...props}>
     <CircularProgressStyled size={40} />
